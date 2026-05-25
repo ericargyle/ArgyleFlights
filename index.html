@@ -5,50 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="ArgyleFlights - a simple daily flight deal landing page."
+      content="ArgyleFlights highlights a simple Chicago flight deal of the day."
     />
+    <meta name="theme-color" content="#0f172a" />
     <title>ArgyleFlights</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="shell">
-      <section class="hero">
-        <p class="eyebrow">ArgyleFlights</p>
-        <h1>
-          the deal of the day is...
-        </h1>
-        <div class="deal-card">
-          <div class="deal-kicker">Chicago to Warsaw, Poland</div>
-          <h2>Scandinavian Airlines</h2>
-          <p class="price">
-            <strong>$590</strong> basic economy or <strong>$690</strong> regular economy
-            roundtrip, including taxes
-          </p>
-          <ul class="details">
-            <li>Route: ORD → CPH → WAW and back</li>
-            <li>Sample travel dates: October 7 - 14</li>
-            <li>Sunday stay required, limited availability</li>
-            <li>Regular economy includes one checked bag each way</li>
-          </ul>
-          <a
-            class="cta"
-            href="https://www.theflightdeal.com/2026/05/22/scandinavian-airlines-chicago-warsaw-poland-590-basic-economy-690-regular-economy-roundtrip-including-all-taxes/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View source deal
-          </a>
+    <main class="page">
+      <section class="hero" aria-labelledby="title">
+        <div class="topline">
+          <span class="brand">ArgyleFlights</span>
+          <span class="badge">Chicago flight deal</span>
         </div>
+
+        <p class="eyebrow">from The Flight Deal</p>
+
+        <h1 id="title">the deal of the day is...</h1>
+
+        <article class="deal-card" aria-label="Featured flight deal">
+          <div class="deal-meta">
+            <span class="city">Chicago to Riga, Latvia</span>
+            <span class="date">Featured today</span>
+          </div>
+
+          <h2>Scandinavian Airlines</h2>
+
+          <p class="lead">
+            <strong>$578</strong> basic economy or <strong>$678</strong>
+            regular economy roundtrip, including all taxes.
+          </p>
+
+          <ul class="details">
+            <li>Sample travel dates: October 14 - 21</li>
+            <li>Fare availability: mid October through mid December or mid January 2027 through early March 2027</li>
+            <li>Regular economy includes one checked bag each way</li>
+            <li>Basic economy is restricted, with no changes or cancellations</li>
+          </ul>
+
+          <div class="actions">
+            <a
+              class="cta"
+              href="https://www.theflightdeal.com/2026/05/24/scandinavian-airlines-chicago-riga-latvia-578-basic-economy-678-regular-economy-roundtrip-including-all-taxes/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View source deal
+            </a>
+            <p class="microcopy">
+              Limited availability. Check the source before booking.
+            </p>
+          </div>
+        </article>
       </section>
-      <aside class="note">
-        <span>Simple. Clean. Public.</span>
-      </aside>
     </main>
   </body>
 </html>
