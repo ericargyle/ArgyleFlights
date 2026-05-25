@@ -98,7 +98,7 @@ h1 {
   margin: 0 0 24px;
   max-width: 10ch;
   font-family: "Fraunces", Georgia, serif;
-  font-size: clamp(3rem, 9vw, 6.4rem);
+  font-size: clamp(2.25rem, 6.5vw, 4.5rem);
   line-height: 0.92;
   letter-spacing: -0.06em;
 }
