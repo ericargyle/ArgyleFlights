@@ -1,15 +1,15 @@
 :root {
-  color-scheme: dark;
-  --bg: #07111f;
-  --bg-2: #10243d;
-  --panel: rgba(9, 17, 32, 0.74);
-  --panel-border: rgba(255, 255, 255, 0.12);
-  --text: #f4f7fb;
-  --muted: rgba(244, 247, 251, 0.72);
-  --soft: rgba(255, 255, 255, 0.08);
-  --accent: #f8b84e;
-  --accent-2: #7dd3fc;
-  --shadow: 0 30px 80px rgba(0, 0, 0, 0.34);
+  color-scheme: light;
+  --bg: #f7f4ee;
+  --bg-2: #ffffff;
+  --panel: rgba(255, 255, 255, 0.82);
+  --panel-border: rgba(15, 23, 42, 0.08);
+  --text: #0f172a;
+  --muted: rgba(15, 23, 42, 0.68);
+  --soft: rgba(15, 23, 42, 0.05);
+  --accent: #d97706;
+  --accent-2: #0f766e;
+  --shadow: 0 28px 70px rgba(15, 23, 42, 0.12);
 }
 
 * {
@@ -26,9 +26,9 @@ body {
   font-family: "Manrope", system-ui, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(248, 184, 78, 0.16), transparent 26%),
-    radial-gradient(circle at top right, rgba(125, 211, 252, 0.18), transparent 22%),
-    radial-gradient(circle at bottom, rgba(52, 211, 153, 0.1), transparent 30%),
+    radial-gradient(circle at top left, rgba(217, 119, 6, 0.13), transparent 24%),
+    radial-gradient(circle at top right, rgba(15, 118, 110, 0.12), transparent 23%),
+    radial-gradient(circle at bottom, rgba(59, 130, 246, 0.08), transparent 30%),
     linear-gradient(160deg, var(--bg), var(--bg-2));
 }
 
@@ -37,8 +37,8 @@ body::before {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
   background-size: 64px 64px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent 85%);
   pointer-events: none;
@@ -68,7 +68,7 @@ body::before {
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(244, 247, 251, 0.88);
+  color: rgba(15, 23, 42, 0.86);
 }
 
 .badge {
@@ -77,8 +77,8 @@ body::before {
   gap: 8px;
   padding: 10px 14px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   color: var(--muted);
   font-size: 0.9rem;
   font-weight: 700;
@@ -109,7 +109,7 @@ h1 {
   padding: clamp(24px, 4vw, 42px);
   border-radius: 30px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78)),
     var(--panel);
   border: 1px solid var(--panel-border);
   box-shadow: var(--shadow);
@@ -124,7 +124,7 @@ h1 {
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(248, 184, 78, 0.28), transparent 70%);
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.18), transparent 70%);
   pointer-events: none;
 }
 
@@ -136,38 +136,50 @@ h1 {
   margin-bottom: 14px;
 }
 
-.city {
-  font-size: 0.95rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.92);
-}
-
 .date {
   padding: 7px 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(15, 23, 42, 0.05);
   color: var(--muted);
   font-size: 0.82rem;
   font-weight: 700;
 }
 
+.route-pill {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.1);
+  color: #0f766e;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
 h2 {
   margin: 0;
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  letter-spacing: -0.04em;
+  max-width: 12ch;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.airline {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2.1vw, 1.35rem);
+  font-weight: 700;
 }
 
 .lead {
   margin: 16px 0 22px;
   max-width: 42rem;
-  color: rgba(244, 247, 251, 0.82);
+  color: var(--muted);
   font-size: clamp(1.05rem, 2vw, 1.2rem);
   line-height: 1.7;
 }
 
 .lead strong {
-  color: #fff;
+  color: var(--text);
 }
 
 .details {
@@ -194,7 +206,7 @@ h2 {
   height: 8px;
   border-radius: 999px;
   background: var(--accent);
-  box-shadow: 0 0 0 4px rgba(248, 184, 78, 0.16);
+  box-shadow: 0 0 0 4px rgba(217, 119, 6, 0.14);
 }
 
 .actions {
@@ -212,28 +224,28 @@ h2 {
   min-height: 50px;
   padding: 0 20px;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent), #ffd98a);
-  color: #1b1a12;
+  background: linear-gradient(135deg, var(--accent), #f59e0b);
+  color: #fff;
   text-decoration: none;
   font-weight: 900;
-  box-shadow: 0 16px 30px rgba(248, 184, 78, 0.25);
+  box-shadow: 0 16px 30px rgba(217, 119, 6, 0.18);
   transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
 }
 
 .cta:hover {
   transform: translateY(-1px);
-  box-shadow: 0 18px 34px rgba(248, 184, 78, 0.3);
+  box-shadow: 0 18px 34px rgba(217, 119, 6, 0.22);
   filter: brightness(1.02);
 }
 
 .cta:focus-visible {
-  outline: 3px solid rgba(125, 211, 252, 0.35);
+  outline: 3px solid rgba(15, 118, 110, 0.24);
   outline-offset: 4px;
 }
 
 .microcopy {
   margin: 0;
-  color: rgba(244, 247, 251, 0.6);
+  color: rgba(15, 23, 42, 0.58);
   font-size: 0.92rem;
 }
 
